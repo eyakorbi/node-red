@@ -1,0 +1,32 @@
+<script type="text/javascript">
+RED.nodes.registerType('taiponrock', {
+  category: 'function',       // Catégorie dans le menu Node-RED
+  color: '#a6bbcf',           // Couleur du nœud
+  defaults: {
+    name: { value: "" }       // Champ de configuration "name"
+  },
+  inputs: 1,                  // Une seule entrée
+  outputs: 1,                 // Une seule sortie
+  icon: "file.png",           // Icône du nœud (par défaut)
+  label: function () {
+    return this.name || "taiponrock";  // Étiquette affichée sur le nœud
+  }
+});
+</script>
+
+<!-- 🧩 Template de configuration du nœud -->
+<script type="text/html" data-template-name="taiponrock">
+  <div class="form-row">
+    <label for="node-input-name">
+      <i class="icon-tag"></i> Name
+    </label>
+    <input type="text" id="node-input-name" placeholder="Name">
+  </div>
+</script>
+
+<!-- 💬 Aide du nœud -->
+<script type="text/html" data-help-name="taiponrock">
+  <p>
+    A simple node that converts the message payload into all lower-case characters.
+  </p>
+</script>
